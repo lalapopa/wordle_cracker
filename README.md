@@ -11,8 +11,10 @@ $ git clone https://github.com/lalapopa/wordle_cracker.git
 Can solve word with length ≤ 9.
 Run script.
 ```sh
-$ python3 main.py
+$ python3 main.py [OPTION]
 ```
+In OPTION you can specify word length, by default 5.
+
 Follow output instruction.
 In first output it gives you a random word from list words_alpha.txt.
 In 'y/n?' you should input y or n and press Enter.
@@ -38,7 +40,6 @@ In what position letter W?
 Begin from 1:1⏎
 ```
 After 'My guess...' output you can find your won word.
-
 
 Huge thanks for https://github.com/dwyl/english-words you guys did amazing work.
 
