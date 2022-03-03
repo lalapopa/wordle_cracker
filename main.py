@@ -197,10 +197,6 @@ def main():
                             pass
                         else:
                             sym_list.append(key)
-
-                print(f"Yellow symbs: {yellow_pos}")
-                print(f"seen char: {sym_list}")
-
                 green_dict = check_green_sym(green_pos)
                 if green_dict:
                     green_pos = green_dict
