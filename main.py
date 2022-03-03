@@ -141,6 +141,19 @@ def check_win():
     else:
         return False
 
+    
+def green_gray_intersect(dead_array, green_dict):
+    dead_array_cp = [val for val in dead_array]
+    pop_index = []
+    for i, val in enumerate(dead_array): 
+        if val in green_dict.keys():
+            pop_index.append(i)
+    for i in pop_index[::-1]:
+        dead_array_cp.pop(i)
+    return dead_array_cp 
+
+    
+
 def main():
     sym_list = []
     dead_sym = []
@@ -177,7 +190,10 @@ def main():
                 green_dict = check_green_sym(green_pos)
                 if green_dict:
                     green_pos = green_dict 
+                if green_pos:
+                    dead_sym = green_gray_intersect(dead_sym, green_pos)
                 print(f'Green symbs: {green_pos}')
+                    
                 find_word = guess_word(
                 word_len, 
                 sym_list, 
