@@ -95,7 +95,7 @@ def random_word(word_len):
 
 def check_dead_sym():
     print("What letter in gray?")
-    x = input()
+    x = input().lower()
     return list(x)
 
 
@@ -104,8 +104,7 @@ def check_yellow_sym(yellow_dict):
     answer = input("y/n?")
     if answer == "y":
         print("What letter in yellow?")
-        yellow_letter = input()
-
+        yellow_letter = input().lower()
         for char in list(yellow_letter):
             print(f"In what position letter {char.upper()}?")
             pos = [int(val) - 1 for val in list(input("Begin from 1:"))]
@@ -126,7 +125,7 @@ def check_green_sym(green_dict):
     answer = input("y/n?")
     if answer == "y":
         print("What letter in green?")
-        green_letter = input()
+        green_letter = input().lower()
         for char in list(green_letter):
             print(f"In what position letter {char.upper()}?")
             pos = [int(val) - 1 for val in list(input("Begin from 1:"))]
